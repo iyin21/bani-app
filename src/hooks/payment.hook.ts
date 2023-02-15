@@ -2,9 +2,9 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 //import { UserResponse } from '../types/user.type';
 
-const baseUrl = 'https://stage.getbani.com/api/v1/comhub/direct_payment_page_details/donate-vera-wangg';
+const baseUrl = 'https://stage.getbani.com/api/v1/comhub/direct_payment_page_details';
 
-function useGetPaymentDetails() {
+function useGetPaymentDetails({page_ref}:{page_ref:string}) {
     const [isLoading, setIsLoading] = useState(false);
     const [userData, setUserData] = useState<any>();
     const[error, setError]= useState("");
@@ -12,7 +12,7 @@ function useGetPaymentDetails() {
     const getPaymentDetails = () => {
         setIsLoading(true);
         axios
-            .get<any>(`${baseUrl}/`, {
+            .get<any>(`${baseUrl}/${page_ref}`, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

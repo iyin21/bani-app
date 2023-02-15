@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { setPaymentData } from "../../redux/slices/paymentSlice";
 import { useAppSelector } from "../../index";
 import {useEffect} from "react";
-import PhoneInput from 'react-phone-number-input'
 
 const CustomerDetails=({data}:{data:any})=>{
     const dispatch = useDispatch();
@@ -18,11 +17,8 @@ const CustomerDetails=({data}:{data:any})=>{
             <h4 className="font-semibold 2md mb-2">Customer’s details</h4>
            <div className="mb-2">
                 <label htmlFor="phoneNumber" className="mb-2">Your Phone number</label>
-                <PhoneInput
-      placeholder="Enter phone number"
-      //value={value}
-      onChange={(value)=>dispatch(setPaymentData({...payment,phoneNumber:value}))}/>
-                <Input name="phoneNumber" placeholder="09rrr"  onChange={(e)=>dispatch(setPaymentData({...payment,phoneNumber: e.target.value}))}/>
+               
+                <Input name="phoneNumber" placeholder="09068689444"  onChange={(e)=>dispatch(setPaymentData({...payment,phoneNumber: e.target.value}))}/>
            </div>
            <div className="mb-2">
                 <label htmlFor="fullName" className="mb-2">Your full name</label>
@@ -37,7 +33,7 @@ const CustomerDetails=({data}:{data:any})=>{
            </div>
            <div className="mb-2 flex flex-col">
                 <label htmlFor="message" className="mb-2">Your message</label>
-                <textarea name="message" id="" cols={30} rows={5} placeholder="Write a message here" className="border border-neutral rounded" onChange={(e)=>dispatch(setPaymentData({...payment,message: e.target.value}))}/>
+                <textarea name="message" id="" cols={30} rows={5} placeholder="Write a message here" className="border border-neutral rounded focus:outline-none" onChange={(e)=>dispatch(setPaymentData({...payment,message: e.target.value}))}/>
            </div>
         </div>
     )

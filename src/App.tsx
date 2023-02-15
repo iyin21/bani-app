@@ -15,7 +15,7 @@ function App() {
   //   handler
    }
 
-  const {isLoading,userData}=useGetPaymentDetails()
+  const {isLoading,userData}=useGetPaymentDetails({page_ref:"share-the-money"})
   console.log(userData)
   return (
     <div>
@@ -24,11 +24,11 @@ function App() {
 
         </div>
       ):(
-        <div>
-          <div className="bg-neutral grid grid-cols-2 px-[250px] pt-[130px] gap-4">
+        <div className="bg-neutral">
+          <div className="grid grid-cols-2 px-[250px] pt-[130px] gap-4">
           <BilliDesign/>
-          <Payment handlePayment={handlePayment} data={userData}/>
-          <CustomerDetails data={userData}/>
+          <Payment handlePayment={handlePayment} data={userData?.data}/>
+          <CustomerDetails data={userData?.data}/>
           </div>
         <Footer/>
       </div>
