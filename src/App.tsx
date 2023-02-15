@@ -7,11 +7,12 @@ import CustomerDetails from './components/CustomerDetails';
 import Footer from './components/footer';
 
 function App() {
+  const ha
   return (
     <div>
       <div className="bg-neutral grid grid-cols-2 px-[250px] pt-[130px] gap-4">
       <BilliDesign/>
-      <Payment/>
+      <Payment handlePayment={handlePayment}/>
       <CustomerDetails/>
     </div>
     <Footer/>
