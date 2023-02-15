@@ -1,10 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@font-face {
+  font-family: "HelveticaNeueCyrBold";
+  src: local("HelveticaNeueCyrBold"),
+      url("./fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "CreatoDisplayItalic";
+  src: local("HelveticaNeueCyrItalic"),
+      url("./fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf")
+          format("truetype");
+  font-weight: italic;
+}
+@font-face {
+  font-family: "HelveticaNeueCyrMedium";
+  src: local("HelveticaNeueCyrMedium"),
+      url("./fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.otf") format("truetype");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr"),
+      url("./fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf")
+          format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueCyrLight";
+  src: local("HelveticaNeueCyrLight"),
+      url("./fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf") format("truetype");
+  font-weight: light;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: HelveticaNeueCyr, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
