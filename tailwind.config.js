@@ -13,7 +13,8 @@ module.exports = {
       blue:"#5444F2",
       white:"#ffffff",
       neutral:"#F4F3FF",
-      red:"#FC3C60"
+      red:"#FC3C60",
+      transparent: "transparent",
     },
     fontSize: {
       "sm":["10px", "12px"],

@@ -27,7 +27,7 @@ const Input=(
                     error ? "border border-red-100" : ""
                 } ${className} ${classNames?.root}`}
             >
-                <input className="w-full input bg-transparent" />
+                <input className="w-full input bg-transparent border-none focus:outline-none" />
             </div>
 
         );
